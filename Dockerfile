@@ -2,7 +2,7 @@ FROM ubuntu:xenial
 MAINTAINER Roy Xiang <developer@royxiang.me>
 
 RUN apt-get update -y \
-    && apt-get install -y curl python3-dev python3-setuptools \
+    && apt-get install -y curl python3-dev python3-setuptools python3-pip \
         libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev \
         libwebp-dev tcl8.5-dev tk8.5-dev libmagic-dev ffmpeg \
     && curl -L -o /tmp/EFB-dev.tar.gz https://github.com/blueset/ehForwarderBot/archive/dev.tar.gz \
