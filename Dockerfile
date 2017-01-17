@@ -8,12 +8,12 @@ RUN apt-get update -y \
     && curl -L -o /tmp/EFB-dev.tar.gz https://github.com/blueset/ehForwarderBot/archive/dev.tar.gz \
     && mkdir /opt/ehForwarderBot \
     && tar xzf /tmp/EFB-dev.tar.gz --strip-components=1 -C /opt/ehForwarderBot \
+    && mkdir /opt/ehForwarderBot/storage \
     && pip3 install -r /opt/ehForwarderBot/requirements.txt \
     && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /root/.cache/* \
     && rm -rf /tmp/*
 
 WORKDIR /opt/ehForwarderBot
-
-VOLUME /opt/ehForwarderBot/storage
 
 CMD ["python3", "main.py"]
