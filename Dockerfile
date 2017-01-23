@@ -10,7 +10,7 @@ RUN apt-get update -y \
     && tar xzf /tmp/EFB-latest.tar.gz --strip-components=1 -C /opt/ehForwarderBot \
     && mkdir /opt/ehForwarderBot/storage \
     && pip3 install -r /opt/ehForwarderBot/requirements.txt \
-    && apt-get autoremove -y curl \
+    && apt-get autoremove -y curl python3-pip \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /root/.cache/* \
     && rm -rf /tmp/*
