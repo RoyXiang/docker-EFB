@@ -1,9 +1,34 @@
-Unofficial Docker image for [EH Forwarder Bot](https://github.com/blueset/ehForwarderBot). Maintained by [Roy Xiang](http://github.com/RoyXiang). Included all officialy maintained channels, updated with the latest dev branch.
+Unofficial Docker image for [EH Forwarder Bot](https://github.com/blueset/ehForwarderBot). Maintained by [Roy Xiang](http://github.com/RoyXiang). Included all officialy maintained channels.
+
+# Supported tags and respective `Dockerfile` links
+
+* `latest` ([Dockerfile](https://github.com/RoyXiang/docker-EFB/blob/master/Dockerfile))
+* `dev` ([Dockerfile](https://github.com/RoyXiang/docker-EFB/blob/dev/Dockerfile))
 
 # Get Started
 
+Make sure you have `config.py` in the current working directory.
+
+If you use Telegram as your master channel and do not have a `tgdata.db` backuped. You need to create one first:
+
 ```
-$ docker run -v config.py:/opt/ehForwarderBot/config.py -v tgdata.db:/opt/ehForwarderBot/plugins/eh_telegram_master/tgdata.db royx/docker-efb
+$ touch tgdata.db
+```
+
+Then start a docker container by the following command:
+
+```
+$ docker run -d --restart=always \
+        --name=ehforwarderbot \
+        -v $(pwd)/config.py:/opt/ehForwarderBot/config.py \
+        -v $(pwd)/tgdata.db:/opt/ehForwarderBot/plugins/eh_telegram_master/tgdata.db \
+        royx/docker-efb
+```
+
+If an interactive process is needed for authentication (like WeChat), check it in docker logs:
+
+```
+$ docker logs ehforwarderbot
 ```
 
 # Volumes
