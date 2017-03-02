@@ -22,4 +22,5 @@ RUN set -ex \
         && curl -L -o /tmp/requirements.txt \
                 https://raw.githubusercontent.com/blueset/ehForwarderBot/dev/requirements.txt \
         && pip3 install -r /tmp/requirements.txt \
-        && rm -rf /root/.cache /tmp/*
+        && rm -rf /root/.cache /tmp/* \
+        && apk del .fetch-deps
