@@ -2,8 +2,8 @@ Unofficial Docker image for [EH Forwarder Bot](https://github.com/blueset/ehForw
 
 # Supported tags and respective `Dockerfile` links
 
-* `latest` ([Dockerfile](https://github.com/RoyXiang/docker-EFB/blob/master/Dockerfile))
-* `dev` ([Dockerfile](https://github.com/RoyXiang/docker-EFB/blob/dev/Dockerfile))
+* [![](https://images.microbadger.com/badges/version/royx/docker-efb.svg)](https://microbadger.com/images/royx/docker-efb "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/royx/docker-efb.svg)](https://microbadger.com/images/royx/docker-efb "Get your own image badge on microbadger.com") ([Dockerfile](https://github.com/RoyXiang/docker-EFB/blob/master/Dockerfile))
+* [![](https://images.microbadger.com/badges/version/royx/docker-efb:dev.svg)](https://microbadger.com/images/royx/docker-efb:dev "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/royx/docker-efb:dev.svg)](https://microbadger.com/images/royx/docker-efb:dev "Get your own image badge on microbadger.com") ([Dockerfile](https://github.com/RoyXiang/docker-EFB/blob/dev/Dockerfile))
 
 # Get Started
 
