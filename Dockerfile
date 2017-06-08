@@ -17,9 +17,7 @@ RUN set -ex \
         && apk add --update --no-cache --virtual .fetch-deps \
                 curl \
                 tar \
-        && curl -L -o EFB-latest.tar.gz \
-                $(curl -s https://api.github.com/repos/blueset/ehForwarderBot/tags \
-                    | grep tarball_url | head -n 1 | cut -d '"' -f 4) \
+        && curl -L -o EFB-latest.tar.gz https://github.com/blueset/ehForwarderBot/archive/v1.6.2.tar.gz \
         && mkdir -p /opt/ehForwarderBot/storage \
         && tar -xzf EFB-latest.tar.gz --strip-components=1 -C /opt/ehForwarderBot \
         && rm EFB-latest.tar.gz \
