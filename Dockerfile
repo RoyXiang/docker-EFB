@@ -1,7 +1,9 @@
-FROM alpine:edge
+FROM alpine
 MAINTAINER Roy Xiang <developer@royxiang.me>
 
 ENV LANG C.UTF-8
+
+ARG VERSION=1.6.4
 
 RUN apk add --update --no-cache ca-certificates
 
@@ -17,10 +19,9 @@ RUN set -ex \
         && apk add --update --no-cache --virtual .fetch-deps \
                 curl \
                 tar \
-        && curl -L -o EFB-latest.tar.gz https://github.com/blueset/ehForwarderBot/archive/v1.6.3.tar.gz \
         && mkdir -p /opt/ehForwarderBot/storage \
-        && tar -xzf EFB-latest.tar.gz --strip-components=1 -C /opt/ehForwarderBot \
-        && rm EFB-latest.tar.gz \
+        && cd /opt/ehForwarderBot \
+        && curl -sSL https://github.com/blueset/ehForwarderBot/archive/v$VERSION.tar.gz | tar xz --strip 1 \
         && apk del .fetch-deps \
         && pip3 install -r /opt/ehForwarderBot/requirements.txt \
         && rm -rf /root/.cache
