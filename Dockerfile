@@ -1,5 +1,5 @@
 FROM alpine:edge
-MAINTAINER Roy Xiang <developer@royxiang.me>
+MAINTAINER Scavin <scavin@appinn.com>
 
 ENV LANG C.UTF-8
 
@@ -11,22 +11,16 @@ RUN set -ex \
                 libmagic \
                 python3 \
                 py3-numpy \
-                py3-pillow
+                py3-pillow \
+                libwebp \
+                py3-yaml \
+                py3-requests \
+                gcc
 
 RUN set -ex \
-        && apk add --update --no-cache --virtual .fetch-deps \
-                curl \
-                tar \
-        && curl -L -o EFB-latest.tar.gz \
-                $(curl -s https://api.github.com/repos/blueset/ehForwarderBot/tags \
-                    | grep tarball_url | head -n 1 | cut -d '"' -f 4) \
-        && mkdir -p /opt/ehForwarderBot/storage \
-        && tar -xzf EFB-latest.tar.gz --strip-components=1 -C /opt/ehForwarderBot \
-        && rm EFB-latest.tar.gz \
-        && apk del .fetch-deps \
-        && pip3 install -r /opt/ehForwarderBot/requirements.txt \
-        && rm -rf /root/.cache
+        && pip install --upgrade pip
+        && pip3 install ehforwarderbot \
+        && pip3 install efb-telegram-master \
+        && pip3 install efb-wechat-slave
 
-WORKDIR /opt/ehForwarderBot
-
-CMD ["python3", "main.py"]
+CMD ["ehforwarderbot"]
