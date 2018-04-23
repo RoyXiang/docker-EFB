@@ -2,6 +2,8 @@ Unofficial Docker image for [EH Forwarder Bot](https://github.com/blueset/ehForw
 
 # Get Started
 
+### config.yaml
+
 Make sure you have `config.yaml` in the current working directory.
 
 Here is an example `config.yaml` file:
@@ -10,6 +12,8 @@ master_channel: blueset.telegram
 slave_channels:
 - blueset.wechat
 ```
+
+### blueset.telegram/config.yaml
 
 If you use Telegram as your master channel and do not have a `config.yaml` backuped. You need to create one first:
 
@@ -21,8 +25,8 @@ Here is an example `blueset.telegram/config.yaml` file:
 
 ```
 token: "Telegram Bot's token"
-admins:
-- Telegram Group ID
+ admins:
+ - Telegram Group ID
 ```
 
 Then start a docker container by the following command:
@@ -30,7 +34,7 @@ Then start a docker container by the following command:
 ```
 $ docker run -d --restart=always \
         --name efbv2 \
-        -v $(pwd):/root/.ehforwarderbot/profiles/default/
+        -v $(pwd):/root/.ehforwarderbot/profiles/default/ \
         scavin/docker-efbv2
 ```
 
