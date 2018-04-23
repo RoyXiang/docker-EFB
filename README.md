@@ -26,7 +26,7 @@ Here is an example `blueset.telegram/config.yaml` file:
 ```
 token: "Telegram Bot's token"
  admins:
- - Telegram Group ID
+ - Your Telegram User ID
 ```
 
 Then start a docker container by the following command:
