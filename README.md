@@ -31,7 +31,7 @@ Then start a docker container by the following command:
 $ docker run -d --restart=always \
         --name efbv2 \
         -v $(pwd):/root/.ehforwarderbot/profiles/default/
-        scavin/efbv2
+        scavin/docker-efbv2
 ```
 
 If an interactive process is needed for authentication (like WeChat), check it in docker logs:
