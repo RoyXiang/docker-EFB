@@ -29,11 +29,6 @@ Then start a docker container by the following command:
 
 ```
 $ docker run -d --restart=always \
-        --name=ehforwarderbot \
-        -v $(pwd)/config.py:/opt/ehForwarderBot/config.py \
-        -v $(pwd)/tgdata.db:/opt/ehForwarderBot/plugins/eh_telegram_master/tgdata.db \
-        royx/docker-efb
-$ docker run -d --restart=always \
         --name efbv2 \
         -v $(pwd):/root/.ehforwarderbot/profiles/default/
         scavin/efbv2
