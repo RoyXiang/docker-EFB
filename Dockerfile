@@ -18,7 +18,7 @@ RUN set -ex \
                 gcc
 
 RUN set -ex \
-        && pip install --upgrade pip
+        && pip3 install --upgrade pip \
         && pip3 install ehforwarderbot \
         && pip3 install efb-telegram-master \
         && pip3 install efb-wechat-slave
