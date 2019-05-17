@@ -11,6 +11,8 @@ Here is an example `config.yaml` file:
 master_channel: blueset.telegram
 slave_channels:
 - blueset.wechat
+middlewares:
+- catbaron.sticker2img
 ```
 
 ### blueset.telegram/config.yaml
