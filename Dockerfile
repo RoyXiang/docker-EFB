@@ -34,7 +34,6 @@ RUN set -ex \
         && pip3 install efb-wechat-slave
         
 RUN git clone https://github.com/catbaron0/efb-sticker2img-middleware
-RUN wget https://gist.githubusercontent.com/blueset/0084ab142e2213bca50d81d08753e564/raw/505e447c0bed1cfad7dd2165ecf019fda7295c87/README.rst -O efb-sticker2img-middleware/README.rst
 RUN cd efb-sticker2img-middleware && python3 setup.py install
 
 CMD ["ehforwarderbot"]
