@@ -25,7 +25,7 @@ Here is an example `blueset.telegram/config.yaml` file:
 
 ```
 token: "Telegram Bot's token"
- admins:
+admins:
  - Your Telegram User ID
 ```
 
