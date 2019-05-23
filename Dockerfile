@@ -31,7 +31,8 @@ RUN set -ex \
         && pip3 install --upgrade pip \
         && pip3 install ehforwarderbot \
         && pip3 install efb-telegram-master \
-        && pip3 install efb-wechat-slave
+        && pip3 install efb-wechat-slave \
+        && pip3 install python-telegram-bot==12.0.0b1 --upgrade
         
 RUN git clone https://github.com/catbaron0/efb-sticker2img-middleware
 RUN cd efb-sticker2img-middleware && python3 setup.py install
