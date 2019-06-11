@@ -37,8 +37,7 @@ RUN set -ex \
         
 RUN git clone https://github.com/catbaron0/efb-sticker2img-middleware
 RUN mkdir -p /root/.ehforwarderbot/profiles/default/modules/
-RUN wget https://gist.githubusercontent.com/blueset/0084ab142e2213bca50d81d08753e564/raw/505e447c0bed1cfad7dd2165ecf019fda7295c87/filter.py -P /root/.ehforwarderbot/profiles/default
-/modules/
+RUN wget https://gist.githubusercontent.com/blueset/0084ab142e2213bca50d81d08753e564/raw/505e447c0bed1cfad7dd2165ecf019fda7295c87/filter.py -P /root/.ehforwarderbot/profiles/default/modules/
 RUN cd efb-sticker2img-middleware && python3 setup.py install
 
 CMD ["ehforwarderbot"]
