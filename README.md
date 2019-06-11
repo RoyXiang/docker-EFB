@@ -1,12 +1,28 @@
 Unofficial Docker image for [EH Forwarder Bot](https://github.com/blueset/ehForwarderBot). 
 
-# Get Started
+# 从这里开始
+
+## 配置文件格式
+
+
+
+```
+├── blueset.telegram
+│   ├── config.yaml
+│   └── tgdata.db *
+├── blueset.wechat *
+│   ├── wxpy.pkl *
+│   └── wxpy_puid.pkl *
+├── config.yaml
+└── docker-compose.yml
+```
+带 * 号为自动生成的路径和文件，可以不用管它。
 
 ### config.yaml
 
-Make sure you have `config.yaml` in the current working directory.
+在当前路径下创建 `config.yaml` 文件
 
-Here is an example `config.yaml` file:
+下面是一个拿来可用的 `config.yaml` 示例：
 ```
 master_channel: blueset.telegram
 slave_channels:
@@ -18,21 +34,21 @@ middlewares:
 
 ### blueset.telegram/config.yaml
 
-If you use Telegram as your master channel and do not have a `config.yaml` backuped. You need to create one first:
+创建 Telegram 主频道配置文件 `config.yaml` 
 
 ```
 $ mkdir blueset.telegram
 $ touch blueset.telegram/config.yaml
 ```
-Here is an example `blueset.telegram/config.yaml` file:
+下面是需要修改的 `blueset.telegram/config.yaml` 示例文件:
 
 ```
 token: "Telegram Bot's token"
 admins:
- - Your Telegram User ID
+ - 你的 Telegram User ID
 ```
 
-Then start a docker container by the following command:
+然后运行：
 
 ```
 $ docker run -d --restart=always \
@@ -41,7 +57,8 @@ $ docker run -d --restart=always \
         scavin/docker-efbv2
 ```
 
-If an interactive process is needed for authentication (like WeChat), check it in docker logs:
+最后，使用下面的命令查看微信二维码：
+
 
 ```
 $ docker logs efbv2
