@@ -64,4 +64,9 @@ $ docker run -d --restart=always \
 $ docker logs efbv2
 ```
 
+## 如何使用过滤
+
+选择你要屏蔽的对象，直接回复 ```filter` ``` 即可
+
+
 [Official Documentation](https://ehforwarderbot.readthedocs.io/en/latest/)
