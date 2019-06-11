@@ -16,7 +16,7 @@ Unofficial Docker image for [EH Forwarder Bot](https://github.com/blueset/ehForw
 ├── config.yaml
 └── docker-compose.yml **
 ```
-* 号为自动生成的路径和文件，可以不用管它。
+标记 * 号为自动生成的路径和文件，可以不用管它，** 可见最后。
 
 ### config.yaml
 
@@ -78,6 +78,7 @@ efbv2:
   container_name: efbv2
   restart: always
   volumes:
-    - ./:/root/.ehforwarderbot/profiles/default/ ```
+    - ./:/root/.ehforwarderbot/profiles/default/ 
+ ```
 
 [Official Documentation](https://ehforwarderbot.readthedocs.io/en/latest/)
