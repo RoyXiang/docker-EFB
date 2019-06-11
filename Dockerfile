@@ -20,7 +20,6 @@ RUN set -ex \
                 py3-numpy \
                 py3-pillow \
                 py3-yaml \
-                py3-requests \
                 py3-cryptography \
                 py3-decorator \
                 git \
@@ -32,6 +31,8 @@ RUN set -ex \
         && pip3 install ehforwarderbot \
         && pip3 install efb-telegram-master \
         && pip3 install efb-wechat-slave \
+        && pip3 install urllib3==1.25.2 \
+        && pip3 install requests==2.22.0 \
         && pip3 install python-telegram-bot==10.1.0 --upgrade
         
 RUN git clone https://github.com/catbaron0/efb-sticker2img-middleware
