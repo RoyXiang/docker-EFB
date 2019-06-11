@@ -14,9 +14,9 @@ Unofficial Docker image for [EH Forwarder Bot](https://github.com/blueset/ehForw
 │   ├── wxpy.pkl *
 │   └── wxpy_puid.pkl *
 ├── config.yaml
-└── docker-compose.yml
+└── docker-compose.yml **
 ```
-带 * 号为自动生成的路径和文件，可以不用管它。
+* 号为自动生成的路径和文件，可以不用管它。
 
 ### config.yaml
 
@@ -68,5 +68,16 @@ $ docker logs efbv2
 
 选择你要屏蔽的对象，直接回复 ```filter` ``` 即可
 
+## Docker Compose
+
+docker-compose.yml 示例：
+
+```
+efbv2:
+  image: scavin/docker-efbv2
+  container_name: efbv2
+  restart: always
+  volumes:
+    - ./:/root/.ehforwarderbot/profiles/default/ ```
 
 [Official Documentation](https://ehforwarderbot.readthedocs.io/en/latest/)
