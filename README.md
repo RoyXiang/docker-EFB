@@ -29,7 +29,6 @@ slave_channels:
 - blueset.wechat
 middlewares:
 - catbaron.sticker2img
-- filter.FilterMiddleware
 ```
 
 ### blueset.telegram/config.yaml
