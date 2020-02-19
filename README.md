@@ -28,7 +28,7 @@ master_channel: blueset.telegram
 slave_channels:
 - blueset.wechat
 middlewares:
-- catbaron.sticker2img
+- filter.FilterMiddleware
 ```
 
 ### blueset.telegram/config.yaml
@@ -65,9 +65,7 @@ $ docker logs efbv2
 
 ## 如何使用过滤
 
-请使用 dev 分支来开启过滤功能。
-
-~~选择你要屏蔽的对象，直接回复 ```filter` ``` 即可~~
+选择你要屏蔽的对象，直接回复 filter\` 即可
 
 ## Docker Compose
 
