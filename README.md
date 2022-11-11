@@ -1,3 +1,5 @@
+# Please use [docker-ehforwarderbot](https://github.com/RoyXiang/docker-ehforwarderbot/pkgs/container/ehforwarderbot) instead.
+
 Unofficial Docker image for [EH Forwarder Bot](https://github.com/blueset/ehForwarderBot). Maintained by [Roy Xiang](http://github.com/RoyXiang). Included all officialy maintained channels.
 
 # Supported tags and respective `Dockerfile` links
